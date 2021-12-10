@@ -1,0 +1,32 @@
+{
+  "name": "http-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "migrate-up": "npx sequelize-cli db:migrate",
+    "migrate-down": "npx sequelize-cli db:migrate:undo",
+    "migrate": "npx sequelize-cli migration:generate --name migration-skeleton",
+    "start": "nodemon ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-redis": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.4",
+    "redis": "^3.1.2",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "nodemon": "^2.0.12",
+    "sequelize-cli": "^6.2.0"
+  },
+  "description": ""
+}
